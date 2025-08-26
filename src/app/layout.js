@@ -4,6 +4,11 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 
+export const metadata = {
+  title: "Hotel Park Hyatt",
+  description: "Amazing Luxury Hotel in Dhaka",
+};
+
 export default function RootLayout(props) {
   return (
     <html lang="en">
