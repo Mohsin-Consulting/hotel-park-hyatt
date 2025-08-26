@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import AboutSection from "@/components/AboutSection";
 import ContactFooter from "@/components/ContactFooter";
 import FacilitiesSection from "@/components/FacilitiesSection";
@@ -6,6 +9,7 @@ import GallerySection from "@/components/GallerySection";
 import HeroSection from "@/components/HeroSection";
 import MapSection from "@/components/MapSection";
 import RoomsSection from "@/components/RoomsSection";
+import LoadingAnimation from "@/components/LoadingAnimation";
 
 // import Slider from "react-slick";
 // import { baseUrl } from "./config";
@@ -43,8 +47,15 @@ import RoomsSection from "@/components/RoomsSection";
 // export default Fade;
 
 export default function Home() {
+  const [showLoading, setShowLoading] = useState(true);
+
+  const handleAnimationComplete = () => {
+    setShowLoading(false);
+  };
+
   return (
     <>
+      {showLoading && <LoadingAnimation onAnimationComplete={handleAnimationComplete} />}
       <HeroSection />
       <AboutSection />
       <RoomsSection />
