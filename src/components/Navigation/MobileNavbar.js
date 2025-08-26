@@ -1,3 +1,4 @@
+"use client";
 import Grid from "@mui/material/Grid";
 import { makeStyles } from "@mui/styles";
 import { Box, Typography } from "@mui/material";

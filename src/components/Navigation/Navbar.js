@@ -1,3 +1,4 @@
+"use client";
 // import { makeStyles } from "@material-ui/core/styles";
 // import { makeStyles } from "@mui/material";
 import { Box, Typography } from "@mui/material";

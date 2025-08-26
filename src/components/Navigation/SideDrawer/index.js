@@ -1,3 +1,4 @@
+"use client";
 // import { Link } from 'gatsby'
 // import { makeStyles } from "@material-ui/core";
 import { Box, Typography, Button } from "@mui/material";
@@ -137,15 +138,17 @@ const SideDrawer = ({ showing, closeSideDrawer }) => {
   if (showing) {
     sideDrawerClasses.push("showing");
   }
-  
+
   // Inline styles to prevent hydration flash - only show after hydration
   const sideDrawerInlineStyle = {
     // Only apply initial hidden state before hydration, then let CSS handle transitions
-    ...(isHydrated ? {} : { 
-      transform: "translateX(-100%)",
-      visibility: "hidden",
-      opacity: 0 
-    }),
+    ...(isHydrated
+      ? {}
+      : {
+          transform: "translateX(-100%)",
+          visibility: "hidden",
+          opacity: 0,
+        }),
   };
 
   return (
@@ -180,25 +183,41 @@ const SideDrawer = ({ showing, closeSideDrawer }) => {
         <nav className={classes.sideDrawerNav}>
           <ul>
             <li>
-              <Link href={`/`} className={classes.link} onClick={closeSideDrawer}>
+              <Link
+                href={`/`}
+                className={classes.link}
+                onClick={closeSideDrawer}
+              >
                 Home
               </Link>
             </li>
 
             <li>
-              <Link href={`/about`} className={classes.link} onClick={closeSideDrawer}>
+              <Link
+                href={`/about`}
+                className={classes.link}
+                onClick={closeSideDrawer}
+              >
                 About
               </Link>
             </li>
 
             <li>
-              <Link href={`/rooms`} className={classes.link} onClick={closeSideDrawer}>
+              <Link
+                href={`/rooms`}
+                className={classes.link}
+                onClick={closeSideDrawer}
+              >
                 Rooms
               </Link>
             </li>
 
             <li>
-              <Link href={`/gallery`} className={classes.link} onClick={closeSideDrawer}>
+              <Link
+                href={`/gallery`}
+                className={classes.link}
+                onClick={closeSideDrawer}
+              >
                 Gallery
               </Link>
             </li>
@@ -210,13 +229,17 @@ const SideDrawer = ({ showing, closeSideDrawer }) => {
             </li> */}
 
             <li>
-              <Link href={`/contact`} className={classes.link} onClick={closeSideDrawer}>
+              <Link
+                href={`/contact`}
+                className={classes.link}
+                onClick={closeSideDrawer}
+              >
                 Contact
               </Link>
             </li>
           </ul>
         </nav>
-        
+
         <Button
           className={classes.callButton}
           fullWidth
