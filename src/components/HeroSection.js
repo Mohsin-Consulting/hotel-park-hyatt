@@ -16,16 +16,9 @@ const Slider = dynamic(() => import("react-slick"), {
     <Box
       sx={{
         height: "100%",
-        bgcolor: "gray",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        backgroundColor: "black",
       }}
-    >
-      <Typography variant="h4" color="white">
-        Loading...
-      </Typography>
-    </Box>
+    />
   ),
 });
 
@@ -132,7 +125,7 @@ const SliderSection = () => {
         sx={{
           height: {
             xs: "100vh",
-            sm: "100vh", 
+            sm: "100vh",
             md: "94vh",
           },
           bgcolor: "gray",
@@ -182,7 +175,10 @@ const SliderSection = () => {
               mb: { xs: "1rem", md: "0.5rem" },
             }}
           >
-            <Box component="span" sx={{ display: { xs: "block", md: "block" } }}>
+            <Box
+              component="span"
+              sx={{ display: { xs: "block", md: "block" } }}
+            >
               Welcome to
             </Box>{" "}
             Hotel Park Hyatt
