@@ -60,7 +60,7 @@ const MobileCtaNavbar = ({ toggleSideDrawer }) => {
           >
             <div className={classes.logoContainer}>
               <Image
-                src="/logo.png"
+                src="/park-hyatt-logo.jpg"
                 alt="Logo"
                 width={32}
                 height={32}

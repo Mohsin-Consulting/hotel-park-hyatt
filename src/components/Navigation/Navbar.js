@@ -116,7 +116,7 @@ const Navbar = () => {
               placeholder="none"
             /> */}
               <Image
-                src="/logo.png"
+                src="/park-hyatt-logo.jpg"
                 alt="Logo"
                 width={50}
                 height={50}

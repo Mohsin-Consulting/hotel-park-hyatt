@@ -169,7 +169,7 @@ const SideDrawer = ({ showing, closeSideDrawer }) => {
       >
         <div className={classes.logoContainer}>
           <Image
-            src="/logo.png"
+            src="/park-hyatt-logo.jpg"
             width={80}
             height={80}
             alt="Logo"

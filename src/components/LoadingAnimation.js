@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
 const LoadingAnimation = ({ onAnimationComplete }) => {
@@ -28,12 +28,12 @@ const LoadingAnimation = ({ onAnimationComplete }) => {
       setLogoOpacity(0);
     }, 2300);
 
-    const timer4 = setTimeout(() => {
+    const timer5 = setTimeout(() => {
       // Overlay starts to fade
       setIsVisible(false);
     }, 2800);
 
-    const timer5 = setTimeout(() => {
+    const timer6 = setTimeout(() => {
       // Animation complete
       if (onAnimationComplete) {
         onAnimationComplete();
@@ -44,8 +44,8 @@ const LoadingAnimation = ({ onAnimationComplete }) => {
       clearTimeout(timer1);
       clearTimeout(timer2);
       clearTimeout(timer3);
-      clearTimeout(timer4);
       clearTimeout(timer5);
+      clearTimeout(timer6);
     };
   }, [onAnimationComplete]);
 
@@ -71,24 +71,48 @@ const LoadingAnimation = ({ onAnimationComplete }) => {
       }}
     >
       <Box
-        component="img"
-        src="/logo-mobile-flyout.png"
-        alt="Hotel Park Hyatt"
         sx={{
-          maxWidth: "200px",
-          maxHeight: "200px",
-          width: "auto",
-          height: "auto",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: 2,
           transform: `scale(${logoScale})`,
           opacity: logoOpacity,
           transition:
             "transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease-out",
-          "@media (max-width: 600px)": {
-            maxWidth: "150px",
-            maxHeight: "150px",
-          },
         }}
-      />
+      >
+        <Box
+          component="img"
+          src="/park-hyatt-logo.jpg"
+          alt="Hotel Park Hyatt"
+          sx={{
+            maxWidth: "200px",
+            maxHeight: "200px",
+            width: "auto",
+            height: "auto",
+            "@media (max-width: 600px)": {
+              maxWidth: "150px",
+              maxHeight: "150px",
+            },
+          }}
+        />
+        <Typography
+          variant="h3"
+          sx={{
+            color: "#ffffff",
+            margin: 0,
+            lineHeight: 1,
+            fontWeight: 400,
+            textAlign: "center",
+            "@media (max-width: 600px)": {
+              fontSize: "3.5rem",
+            },
+          }}
+        >
+          Park Hyatt
+        </Typography>
+      </Box>
     </Box>
   );
 };
